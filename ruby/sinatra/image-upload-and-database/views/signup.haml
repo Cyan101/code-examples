@@ -1,0 +1,10 @@
+!!!
+%html
+%body
+  %form{id: 'form', name: 'signupform', method: 'post', action: '/signup'}
+    %label{for: 'username'}Username
+    %input{type: 'text', name: 'username'}
+    %label{for: 'password'}password
+    %input{type: 'password', name: 'password'}
+    %input{type: 'submit', value: 'Submit'}
+    %p= error ||= ''

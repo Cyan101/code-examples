@@ -1,0 +1,8 @@
+Discord bot for NodeJS using Discordie
+--------
+Read/Write game play time to .JSON files
+Upload files and do random math
+Use regex on messages to change reaction (.setstatus <away/idle/online> Playing Overwatch)
+-------
+Abandoned because learning Ruby and i've done all i can think of with this
+Also game recording broke somehow, don't have the time to fix it

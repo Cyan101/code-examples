@@ -1,0 +1,7 @@
+!!!
+%html
+  %body
+    - Dir['public/images/*'].each do |pic|
+      %img{src: "#{pic}".gsub!('public', ''), alt: "#{pic}"}
+    %p Enjoy~
+      
