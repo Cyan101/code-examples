@@ -1,0 +1,10 @@
+!!!
+%html{:lang => 'eng'}
+  = haml :'_header', :locals => {:title => title}
+  %body
+    %p
+      I just wanted to say
+      %em{style: "color: green"}=greeting
+    - (10..15).each do |x|
+      %p=x
+    %p Nyaaa~
