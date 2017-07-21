@@ -2,7 +2,17 @@
   --main-color: blue;
   --secondary-color: skyblue;
   --grid-gap: 5px;
+  --font-size: 1em;
 }
+p {
+  font-size: var(--font-size);
+  display: inline-block;
+}
+
+a:matches(:hover, :focus, :active, :visited) /* Hardly Supported Yet */ {
+  color: crimson;
+}
+@supports (display: grid) {} /* Check for support of a CSS*/
 
 #wrapper {
   display: grid;
@@ -31,6 +41,7 @@
 .navbar {
   background-color: var(--secondary-color);
   grid-area: nav;
+  --font-size: 1.5em;
 }
 
 .content {
@@ -41,6 +52,23 @@
 .footer {
   background-color: grey;
   grid-area: ft;
+}
+
+.email {
+  margin-left: 1em;
+}
+
+.email:focus:invalid {
+  border-color: crimson;
+}
+.email:focus + .icn::before {
+  content: '❌';
+}
+.email:valid {
+  border-color: green;
+}
+.email:valid + .icn::before {
+  content: '✅';
 }
 
 @media (max-width: 550px) {
