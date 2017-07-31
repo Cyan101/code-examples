@@ -1,21 +1,15 @@
 require 'yaml'
+require 'ostruct'
 
-class Config
-  def initialize(file)
-    @config = YAML.load_file file
-    @config.keys.each do |key|
-      self.class.send(:define_method, key) do
-        @config[key]
-      end
-    end
-  end
+def make_config(filename)
+  loaded_yaml = YAML.load_file filename
+  @config = OpenStruct.new(loaded_yaml)
 end
 
+make_config('config.yaml')
+puts @config.id
 
-config = Config.new('config.yaml')
-puts config.secret_key
-
-# Example config.yaml
+# Example Config File
 #---
-#  secret_key: OneTwoThreeFour
-#  user_id: 123456789
+#  id: 1234567890
+#  secret: WubbaLubbaDubDub
