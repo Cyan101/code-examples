@@ -1,27 +1,27 @@
-require 'curses'
+require "curses"
 
-include Curses
-
-def show_message(mess)
-  width = mess.length + 6
-  win = Window.new(5, width, (lines - 5) / 2,(cols - width) / 2 )
-  win.box(?|,?-)
-  win.setpos(2,3)
-  win.addstr(mess)
+def show_message(message)
+  height = 5
+  width  = message.length + 6
+  top    = (Curses.lines - height) / 2
+  left   = (Curses.cols - width) / 2
+  win = Curses::Window.new(height, width, top, left)
+  win.box("|", "-")
+  win.setpos(2, 3)
+  win.addstr(message)
   win.refresh
   win.getch
   win.close
 end
 
-init_screen
+Curses.init_screen
 begin
-  crmode
-  setpos((lines - 5) / 2, (cols - 10) / 2)
-  addstr('Hit any key')
-  refresh
-  getch
-  show_message('Hello World!')
-  refresh
+  Curses.crmode
+  Curses.setpos((Curses.lines - 1) / 2, (Curses.cols - 11) / 2)
+  Curses.addstr("Hit any key")
+  Curses.refresh
+  Curses.getch
+  show_message("Hello, World!")
 ensure
-  close_screen
+  Curses.close_screen
 end
