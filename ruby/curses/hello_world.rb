@@ -5,13 +5,13 @@ def show_message(message)
   width  = message.length + 6
   top    = (Curses.lines - height) / 2
   left   = (Curses.cols - width) / 2
-  win = Curses::Window.new(height, width, top, left)
-  win.box("|", "-")
-  win.setpos(2, 3)
-  win.addstr(message)
-  win.refresh
-  win.getch
-  win.close
+  win = Curses::Window.new(height, width, top, left) # Build the window from the variables above
+  win.box("/", "~") # The sides and top/bottom of the box made
+  win.setpos(2, 3) # Sets the position of the message/stuff inside the box
+  win.addstr(message) # Add a string to the box
+  win.refresh # Update the windows (Show what we did above)
+  win.getch # Wait for user input (?)
+  win.close # Close the window
 end
 
 Curses.init_screen
