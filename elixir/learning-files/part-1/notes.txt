@@ -1,0 +1,39 @@
+Elixir strays away from Ruby a fair bit, even though it is inspired by it
+
+Cant do stuff like making a variable (eg. rawr = "hi") and then doing rawr.length, you need to call String.length and then give it rawr
+Half confused because you can do length [1,2,3] and it will output the length
+
+When talking about functions in elixir it looks like people do hd/1 or tl/1 which I think means it takes in 1 variable?
+Compared to Ruby devs where we just say #length or #uppercase
+
+Immutability was a confusing thing for me, I was told it helps with writing nice code but it also keeps variables and stuff SAFE!
+This is what got me, variables CAN be overwritten and replaced, so I was confused at how this keeps variables and data safe.
+Turns out I was looking at it the wrong way, after talking with another elixir dev I managed to figure out what it actually meant.
+
+
+From my discord chat:
+
+#-----
+Cyan -
+I'm confused
+Immutable keeps variables and data safe by not letting you change them, but you can reassign variables which basically
+overwrites them and you lose the old data.... So it's not safe?
+Sorry if I'm overthinking
+
+Elixir Dev 420 -
+you are lol
+it's all about the data itself
+not the variable it's assigned to
+
+Cyan -
+So it's more
+You can't fuck the data
+Not you can't lose the data
+?
+
+Elixir Dev 420 -
+yep
+#-----
+
+So it basically means your data is safe from being edited or messed with or just changed in any way,
+but its not safe from being replaced or overwritten with new data
