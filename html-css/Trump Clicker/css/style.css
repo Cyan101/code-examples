@@ -1,0 +1,94 @@
+body {
+  text-align: center;
+}
+.leftwrapper {
+  width: 500px;
+  height: 300px;
+  margin-top: 40px;
+  margin-left: 80px;
+  float: left;
+}
+.savearea {
+  text-align: left;
+}
+#save, #load {
+  background-color: white;
+  cursor: pointer;
+  border: none;
+  outline: none;
+}
+img.saveandload {
+  width: 42px;
+}
+.rightwrapper {
+  text-align: left;
+}
+.cookieButton button {
+  float: left;
+  margin-left: 130px;
+  background-color: white;
+  cursor: pointer;
+  border: none;
+  outline: none;
+}
+.shop {
+  margin-left: 680px;
+  margin-bottom: 0;
+  margin-top: 300px;
+  text-align: center;
+}
+img.trumpface {
+  width: 200px;
+  padding: 20px;
+  margin-bottom: 22px;
+}
+.cookieButton button:active img {
+  width: 240px;
+  padding: 1px;
+  margin-bottom: 20px;
+}
+table, th, td {
+  border: 1px solid black;
+  border-collapse: collapse;
+}
+table {
+  width: 325px;
+}
+.walltable {
+  float: left;
+  margin-left: 75px;
+  width: 270px;
+}
+#wallvpscost {
+  width: 50%;
+}
+#buyheading {
+  width: 35%;
+}
+.headings {
+  font-weight: bold;
+}
+p#comment {
+  font-style: italic;
+  font-size: 40px;
+  margin-left: 10%;
+  margin-right: 10%;
+}
+p#cookies {
+  margin-left: 760px;
+}
+p#cps {
+  margin-left: 780px;
+}
+.wall {
+  clear: both;
+  float: left;
+  width: 30em;
+  margin-top: 5px;
+  word-wrap: break-word;
+  text-align: left;
+}
+#intrudercount {
+  margin: 0;
+    text-align: left;
+}

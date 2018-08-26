@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Trump Clicker</title>
+  <meta charset="UTF-8">
+  <meta name="author" content="Jos Spencer">
+  <meta name="keywords" content="These, are, keywords, for, my, site">
+  <meta name="description" content="Trump Clicker">
+  <link rel="stylesheet" type="text/css" href="css/style.css">
+</head>
+
+<body>
+  <div class="savearea">
+    <button id="save" type="submit" value="Save" onclick="save()"><img class="saveandload" src="images/save.png" /></input>
+      <button id="load" type="submit" value="Load" onclick="load()"><img class="saveandload" src="images/reload.png" /></input>
+  </div>
+  <div class="leftwrapper">
+        <div><i><b>
+        <p id="intrudercount">Intruders Stopped: 0</p>
+      </i></b>
+        </div>
+    <section class="wall">
+      <p id="walltext"></p>
+    </section>
+    <table class="walltable">
+      <tr>
+        <td>
+          <input id="buildwall" type="submit" value="Build Trumps Wall" onclick="buildwall()"></input>
+        </td>
+        <td id="wallvpscost">VPS Cost: 100</td>
+      </tr>
+    </table>
+  </div>
+  <div class="rightwrapper">
+    <p id="cookies">Click for Vote Power!!!</p>
+    <div></div>
+    <p id="cps">Current VPS: 0</p>
+    <div class="cookieButton" onkeypress="return event.keyCode != 13;">
+      <button type="submit" value="" name="" onclick="cookieClick()"><img class="trumpface" src="images/Trump4.png" /></button>
+    </div>
+    <div class="shop">
+      <table>
+        <tr class="headings">
+          <td id="buyheading">Buy</td>
+          <td id="nameheading">Name</td>
+          <td id="ownedheading">Owned</td>
+          <td id="priceheading">Price</td>
+        </tr>
+        <tr>
+          <td>
+            <input id="buyPoller" type="submit" value="Buy Poller" onclick="buyPoller()" disabled></input>
+          </td>
+          <td>Poller</td>
+          <td id="pollercount">0</td>
+          <td id="Pprice">10</td>
+        </tr>
+        <tr>
+          <td>
+            <input id="buyVoter" type="submit" value="Buy Voter" onclick="buyVoter()" disabled></input>
+          </td>
+          <td>Voter</td>
+          <td id="votercount">0</td>
+          <td id="Vprice">50</td>
+        </tr>
+        <tr>
+          <td>
+            <input id="buyIlluminati" type="submit" value="Buy Illuminati" onclick="buyIlluminati()" disabled></input>
+          </td>
+          <td>Illuminati</td>
+          <td id="illuminaticount">0</td>
+          <td id="Iprice">200</td>
+        </tr>
+      </table>
+    </div>
+  </div>
+  <br />
+  <br />
+  <br />
+  <p id="comment">"Trumps smart words"</p>
+  <br />
+  <br />
+  <script src="js/workingversion.js"></script>
+</body>
