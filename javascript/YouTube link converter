@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Page Title</title>
+<style>
+#vidlink{
+border:1px solid red;
+}
+</style>
+</head>
+<body>
+<label>Video:<input id="vidlink" onchange="Vidpreview()" type="Url"></label><p id="embedread"></p></br>
+
+<iframe class="Vidframe" id="Vidframe" width="320" height="215" frameborder="1" allow="autoplay; encrypted-media" ></iframe>
+
+</body>
+<script>
+function Vidpreview(){
+         var youtubeSrc = document.getElementById("vidlink").value;
+		 var youtubeId = youtubeSrc.split("/");
+		 if(youtubeId[3].length>11){
+		   var trueYoutubeId = youtubeId[3].split("=");                        //split the link to extract youTube vid id
+		   var youtubeEmbed = "https://youtube.com/embed/" + trueYoutubeId[1]; //used to determine if its from browser link or share link
+		 }else{                                                                //and turn them into embed link for iframes    
+		   var youtubeEmbed = "https://youtube.com/embed/" + youtubeId[3];
+         }                                                             
+         document.getElementById("Vidframe").src = youtubeEmbed;     
+		 document.getElementById("embedread").innerHTML = youtubeEmbed;
+         }
+</script>
+</html>
