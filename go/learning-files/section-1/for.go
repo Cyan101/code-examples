@@ -19,7 +19,7 @@ func main() {
   //Another loop, checks if remainder of n/2 is 0 aka even or odd
   for n := 0; n <= 5; n++ {
     if n%2 == 0 {
-      continue
+      continue //Continue goes to the next loop iteration
     }
     fmt.Println(n)
   }
